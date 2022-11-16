@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>etc on hossi&#39;s blog</title>
-    <link>https://hossi97.github.io/posts/</link>
-    <description>Recent content in etc on hossi&#39;s blog</description>
+    <title>#첫 게시글 on hossi&#39;s blog</title>
+    <link>https://hossi97.github.io/tags/#%EC%B2%AB-%EA%B2%8C%EC%8B%9C%EA%B8%80/</link>
+    <description>Recent content in #첫 게시글 on hossi&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hossi97.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hossi97.github.io/tags/#%EC%B2%AB-%EA%B2%8C%EC%8B%9C%EA%B8%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>대망의 블로그 첫 게시글</title>
       <link>https://hossi97.github.io/posts/1/</link>
