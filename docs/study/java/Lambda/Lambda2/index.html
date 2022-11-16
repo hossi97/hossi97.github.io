@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content=" 람다식 Lambda Expression # 람다식의 장단점 # 장점 # 기존 익명함수 코드를 줄여 간단하게 작성 가능 가독성 증가 병렬 프로그래밍에 용이 단점 # 남용하면 코드를 이해하는데 어려움 까다로운 재귀 활용 및 디버깅 ">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Study" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://hossi97.github.io/docs/study/" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="람다식의 타입과 형변환" />
+<meta property="og:description" content=" 람다식 Lambda Expression # 람다식의 장단점 # 장점 # 기존 익명함수 코드를 줄여 간단하게 작성 가능 가독성 증가 병렬 프로그래밍에 용이 단점 # 남용하면 코드를 이해하는데 어려움 까다로운 재귀 활용 및 디버깅 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hossi97.github.io/docs/study/java/Lambda/Lambda2/" /><meta property="article:section" content="docs" />
 
-<title>Study | hossi&#39;s blog</title>
+
+
+<title>람다식의 타입과 형변환 | hossi&#39;s blog</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0810f6595c962d1b75263ff619a36d21f9189b22299cf2b41569e109cea20a5c.css" integrity="sha256-CBD2WVyWLRt1Jj/2GaNtIfkYmyIpnPK0FWnhCc6iClw=" crossorigin="anonymous">
@@ -18,7 +20,6 @@
   <script defer src="/ko.search.min.f9524cb02109376d0315f460a3c588053d948dd79c24ea594deae85c1a59a4e5.js" integrity="sha256-&#43;VJMsCEJN20DFfRgo8WIBT2UjdecJOpZTeroXBpZpOU=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://hossi97.github.io/docs/study/index.xml" title="hossi's blog" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -83,7 +84,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-b9874594414d39cfd734d05963545a36" class="toggle"  />
+    <input type="checkbox" id="section-b9874594414d39cfd734d05963545a36" class="toggle" checked />
     <label for="section-b9874594414d39cfd734d05963545a36" class="flex justify-between">
       <a href="/docs/study/java/" class="">Java</a>
     </label>
@@ -99,7 +100,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-c2f2bffcd0cc96b23903228b0c6c3e80" class="toggle"  />
+    <input type="checkbox" id="section-c2f2bffcd0cc96b23903228b0c6c3e80" class="toggle" checked />
     <label for="section-c2f2bffcd0cc96b23903228b0c6c3e80" class="flex justify-between">
       <a role="button" class="">Lambda</a>
     </label>
@@ -128,7 +129,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/study/java/Lambda/Lambda2/" class="">람다식의 타입과 형변환</a>
+    <a href="/docs/study/java/Lambda/Lambda2/" class="active">람다식의 타입과 형변환</a>
   
 
         </li>
@@ -293,7 +294,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Study</strong>
+  <strong>람다식의 타입과 형변환</strong>
 
   <label for="toc-control">
     
@@ -307,7 +308,20 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#람다식-lambda-expression">람다식 Lambda Expression</a>
+      <ul>
+        <li><a href="#람다식의-장단점">람다식의 장단점</a>
+          <ul>
+            <li><a href="#장점">장점</a></li>
+            <li><a href="#단점">단점</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -318,7 +332,33 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"></article>
+  <article class="markdown"><h1 id="람다식-lambda-expression">
+  람다식 Lambda Expression
+  <a class="anchor" href="#%eb%9e%8c%eb%8b%a4%ec%8b%9d-lambda-expression">#</a>
+</h1>
+<hr>
+<h2 id="람다식의-장단점">
+  람다식의 장단점
+  <a class="anchor" href="#%eb%9e%8c%eb%8b%a4%ec%8b%9d%ec%9d%98-%ec%9e%a5%eb%8b%a8%ec%a0%90">#</a>
+</h2>
+<h3 id="장점">
+  장점
+  <a class="anchor" href="#%ec%9e%a5%ec%a0%90">#</a>
+</h3>
+<ul>
+<li>기존 익명함수 코드를 줄여 간단하게 작성 가능</li>
+<li>가독성 증가</li>
+<li>병렬 프로그래밍에 용이</li>
+</ul>
+<h3 id="단점">
+  단점
+  <a class="anchor" href="#%eb%8b%a8%ec%a0%90">#</a>
+</h3>
+<ul>
+<li>남용하면 코드를 이해하는데 어려움</li>
+<li>까다로운 재귀 활용 및 디버깅</li>
+</ul>
+</article>
  
       
 
@@ -327,16 +367,10 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/hossi97/blog/commit/28420122f2931db2f0b241cc277d9158a4908f43" title='Last modified by hossi97 | November 17, 2022' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>November 17, 2022</span>
-    </a>
-  </div>
-
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/hossi97/blog/tree/main/content.ko/docs/study/_index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/hossi97/blog/tree/main/content.ko/docs/study/java/Lambda/Lambda2.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>Edit this page</span>
     </a>
@@ -356,6 +390,11 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+<script src="https://utteranc.es/client.js" repo="hossi97/blog" issue-term="pathname" label="comments" theme="github-light" crossorigin="anonymous" async></script>
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -366,7 +405,20 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#람다식-lambda-expression">람다식 Lambda Expression</a>
+      <ul>
+        <li><a href="#람다식의-장단점">람다식의 장단점</a>
+          <ul>
+            <li><a href="#장점">장점</a></li>
+            <li><a href="#단점">단점</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  
