@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="버전관리 시스템 # 버전관리와 백업의 중요성 # 다음과 같은 상황을 가정해보자.
+개발자 A 가 file1.txt 를 작업 후 개발자 B 에게 보냈다. 개발자 B 는 개발자 A 에게 이 파일에 대해 수정 요청을 전달했다. 개발자 A 는 file1.txt 를 덮어써 수정 후 새로운 file1.txt 를 개발자 B 에게 보냈다. 개발자 B 는 이전의 file1.txt 가 낫다며, 다시 이전 버전의 파일을 개발자 A 에게 요청했다. 이 때, 개발자 A 와 B 모두 이전의 file1.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="버전관리 시스템" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hossi97.github.io/docs/study/git/about-git/" />
+
+<title>버전관리 시스템 | hossi&#39;s blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.fa81297f29283a9b9300f94a5b6e386beb50cae49736d3bcee5365a5fed2d796.css" integrity="sha256-&#43;oEpfykoOpuTAPlKW244a&#43;tQyuSXNtO87lNlpf7S15Y=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/ko.search.min.ef55d7c47131502f9a0ab3925c407c43aef05af4007c7236fd8d3e8cb2917698.js" integrity="sha256-71XXxHExUC&#43;aCrOSXEB8Q67wWvQAfHI2/Y0&#43;jLKRdpg=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="https://hossi97.github.io/docs/study/git/about-git/index.xml" title="hossi's blog" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>hossi&#39;s blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Study</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b9874594414d39cfd734d05963545a36" class="toggle"  />
+    <label for="section-b9874594414d39cfd734d05963545a36" class="flex justify-between">
+      <a href="/docs/study/java/" class="">Java</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c2f2bffcd0cc96b23903228b0c6c3e80" class="toggle"  />
+    <label for="section-c2f2bffcd0cc96b23903228b0c6c3e80" class="flex justify-between">
+      <a role="button" class="">Lambda</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/study/java/Lambda/Lambda1/" class="">람다식</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/study/java/Lambda/Lambda2/" class="">람다식의 타입과 형변환</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aefbe02c11adffaccbc9def640bf830c" class="toggle"  />
+    <label for="section-aefbe02c11adffaccbc9def640bf830c" class="flex justify-between">
+      <a role="button" class="">Stream</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/study/git/" class="">Git</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/study/git/install-git-mac/" class="">Git 설치하기 - MAC</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/study/git/about-git/" class="active">버전관리 시스템</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>memory</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dc908141e478750f00bc34c895e4fd4f" class="toggle"  />
+    <label for="section-dc908141e478750f00bc34c895e4fd4f" class="flex justify-between">
+      <a role="button" class="">2022</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/memory/2022/11/" class="">Nov</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        etc
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>버전관리 시스템</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#버전관리-시스템">버전관리 시스템</a>
+      <ul>
+        <li><a href="#버전관리와-백업의-중요성">버전관리와 백업의 중요성</a></li>
+        <li><a href="#효율적인-백업의-필요성">효율적인 백업의 필요성</a></li>
+        <li><a href="#버전관리-시스템-vcs-version-control-system">버전관리 시스템, VCS (Version Control System)</a>
+          <ul>
+            <li><a href="#버전관리-시스템의-문제점">버전관리 시스템의 문제점</a></li>
+          </ul>
+        </li>
+        <li><a href="#중앙집중형-버전관리-시스템-cvcs">중앙집중형 버전관리 시스템, CVCS</a>
+          <ul>
+            <li><a href="#중앙집중형-버전관리-시스템의-문제점">중앙집중형 버전관리 시스템의 문제점</a></li>
+          </ul>
+        </li>
+        <li><a href="#분산형-버전관리-시스템-dvcs">분산형 버전관리 시스템, DVCS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="버전관리-시스템">
+  버전관리 시스템
+  <a class="anchor" href="#%eb%b2%84%ec%a0%84%ea%b4%80%eb%a6%ac-%ec%8b%9c%ec%8a%a4%ed%85%9c">#</a>
+</h1>
+<hr>
+<h2 id="버전관리와-백업의-중요성">
+  버전관리와 백업의 중요성
+  <a class="anchor" href="#%eb%b2%84%ec%a0%84%ea%b4%80%eb%a6%ac%ec%99%80-%eb%b0%b1%ec%97%85%ec%9d%98-%ec%a4%91%ec%9a%94%ec%84%b1">#</a>
+</h2>
+<p>다음과 같은 상황을 가정해보자.</p>
+<ol>
+<li>개발자 A 가 <code>file1.txt</code> 를 작업 후 개발자 B 에게 보냈다.</li>
+<li>개발자 B 는 개발자 A 에게 이 파일에 대해 수정 요청을 전달했다.</li>
+<li>개발자 A 는 <code>file1.txt</code> 를 덮어써 수정 후 새로운 <code>file1.txt</code> 를 개발자 B 에게 보냈다.</li>
+<li>개발자 B 는 이전의 <code>file1.txt</code> 가 낫다며, 다시 이전 버전의 파일을 개발자 A 에게 요청했다.</li>
+</ol>
+<p>이 때, 개발자 A 와 B 모두 이전의 file1.txt 파일을 백업해놓지 않았다면 어떻게 될까? 이전 파일로 손쉽게 복구할 수 없을 것이다.</p>
+<p>이러한 문제로 인해 아래와 같이 버전별로 파일을 백업하고 관리해야 한다.</p>
+<ol>
+<li>개발자 A 가 <code>file1-v1.txt</code> 를 작업 후 개발자 B 에게 보냈다.</li>
+<li>개발자 B 는 개발자 A 에게 이 파일에 대해 수정 요청을 전달했다.</li>
+<li>개발자 A 는 <code>file1-v1.txt</code> 을 따로 백업하고 수정 후, 새로운 <code>file1-v2.txt</code> 를 개발자 B 에게 보냈다.</li>
+<li>개발자 B 는 이전의 <code>file1-v1.txt</code> 가 낫다며, 다시 이전 버전의 파일을 개발자 A 에게 요청했다.</li>
+</ol>
+<hr>
+<h2 id="효율적인-백업의-필요성">
+  효율적인 백업의 필요성
+  <a class="anchor" href="#%ed%9a%a8%ec%9c%a8%ec%a0%81%ec%9d%b8-%eb%b0%b1%ec%97%85%ec%9d%98-%ed%95%84%ec%9a%94%ec%84%b1">#</a>
+</h2>
+<p><strong>file-v1.txt</strong></p>
+<pre tabindex="0"><code>abc
+abc
+</code></pre><p><strong>file-v2.txt</strong></p>
+<pre tabindex="0"><code>abc
+dfe
+</code></pre><p>위와 같이 버전이 업로드될 때마다 새로운 파일의 형태로 백업하면 어떻게 될까?</p>
+<ul>
+<li>새로운 파일을 생성해 같은 데이터를 통으로 복사하는 <code>시간적 비용</code>이 들 수 있다.</li>
+<li>경우에 따라 버전이 달라져도 abc 라는 데이터는 그대로 유지되는 경우 중복된 데이터인 <code>abc</code> 는 <code>용량 낭비</code>를 초래할 것이다.</li>
+</ul>
+<hr>
+<h2 id="버전관리-시스템-vcs-version-control-system">
+  버전관리 시스템, VCS (Version Control System)
+  <a class="anchor" href="#%eb%b2%84%ec%a0%84%ea%b4%80%eb%a6%ac-%ec%8b%9c%ec%8a%a4%ed%85%9c-vcs-version-control-system">#</a>
+</h2>
+<p>버전관리 시스템은 버전관리와 비효율적인 백업 문제를 해결해줄 수 있다.</p>
+<ol>
+<li>하나의 파일에서 수정을 한다.</li>
+<li>수정사항을 체크해 버전을 관리한다. (ex. 수정사항이 생길때 마다 버전을 1씩 증가)</li>
+<li>필요에 따라 이전 버전의 데이터로 돌아간다.</li>
+</ol>
+<h3 id="버전관리-시스템의-문제점">
+  버전관리 시스템의 문제점
+  <a class="anchor" href="#%eb%b2%84%ec%a0%84%ea%b4%80%eb%a6%ac-%ec%8b%9c%ec%8a%a4%ed%85%9c%ec%9d%98-%eb%ac%b8%ec%a0%9c%ec%a0%90">#</a>
+</h3>
+<p>단, 버전관리 시스템에도 문제가 있다.</p>
+<ul>
+<li>바이러스에 노출되면 파일 전체가 날아갈 수 있다.</li>
+<li>협업이 불가능하다.</li>
+</ul>
+<hr>
+<h2 id="중앙집중형-버전관리-시스템-cvcs">
+  중앙집중형 버전관리 시스템, CVCS
+  <a class="anchor" href="#%ec%a4%91%ec%95%99%ec%a7%91%ec%a4%91%ed%98%95-%eb%b2%84%ec%a0%84%ea%b4%80%eb%a6%ac-%ec%8b%9c%ec%8a%a4%ed%85%9c-cvcs">#</a>
+</h2>
+<p>중앙집중형 버전관리 시스템의 경우, 버전 관리용 중앙 컴퓨터 개념을 도입해 아래와 같은 방식으로 협업이 가능하다.</p>
+<ol>
+<li>개발자 A 는 <code>file1.txt (ver1)</code> 를 작업한다.</li>
+<li><code>file1.txt (ver1)</code> 을 중앙 컴퓨터에 업로드한다.</li>
+<li>개발자 B 는 C 컴퓨터에 저장된 <code>file1.txt (ver1)</code> 를 다운로드해 작업한다.</li>
+<li><code>file1.txt (ver2)</code> 을 중앙 컴퓨터에 업로드한다.</li>
+</ol>
+<p>핵심은 버전에 대한 history 를 로컬에 저장된 파일은 갖고 있지 않다는 점이다.</br>
+버전에 대한 history 는 중앙 컴퓨터에서 관리하는 파일만 갖고 있다.</p>
+<h3 id="중앙집중형-버전관리-시스템의-문제점">
+  중앙집중형 버전관리 시스템의 문제점
+  <a class="anchor" href="#%ec%a4%91%ec%95%99%ec%a7%91%ec%a4%91%ed%98%95-%eb%b2%84%ec%a0%84%ea%b4%80%eb%a6%ac-%ec%8b%9c%ec%8a%a4%ed%85%9c%ec%9d%98-%eb%ac%b8%ec%a0%9c%ec%a0%90">#</a>
+</h3>
+<p>하지만 CVCS 에도 문제점이 있는데,</p>
+<ul>
+<li>
+<p>협업 시, 소통을 원할히 하지 않으면 수정된 데이터가 날아갈 수 있다. </br> 예를 들어, <code>file1.txt (ver2)</code> 가 업로드된 것을 모르고 개발자 A가 <code>file1.txt (ver1)</code> 을 재업로드할 수 있다.</p>
+</li>
+<li>
+<p>중앙 컴퓨터 혹은 컴퓨터에 저장된 파일에 바이러스가 걸리면 파일 전체가 날아갈 수 있다.</p>
+</li>
+</ul>
+<hr>
+<h2 id="분산형-버전관리-시스템-dvcs">
+  분산형 버전관리 시스템, DVCS
+  <a class="anchor" href="#%eb%b6%84%ec%82%b0%ed%98%95-%eb%b2%84%ec%a0%84%ea%b4%80%eb%a6%ac-%ec%8b%9c%ec%8a%a4%ed%85%9c-dvcs">#</a>
+</h2>
+<p>중앙집중형 버전관리 시스템이 버전에 대한 history 를 중앙 컴퓨터에 저장된 파일만 갖고 것과 달리,</br>
+분산형 버전관리 시스템은 로컬에 저장된 파일도 history 를 갖고 있다.</p>
+<p>이런 방식을 채택하면 중앙 저장소에 있는 파일에 문제가 생기더라도 여러 작업자가 history 를 유지한 파일을 갖고 있기 때문에 파일의 보존이 가능해진다.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/hossi97/blog/tree/main/content.ko/docs/study/git/about-git/_index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+<script src="https://utteranc.es/client.js" repo="hossi97/blog" issue-term="pathname" label="comments" theme="github-light" crossorigin="anonymous" async></script>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#버전관리-시스템">버전관리 시스템</a>
+      <ul>
+        <li><a href="#버전관리와-백업의-중요성">버전관리와 백업의 중요성</a></li>
+        <li><a href="#효율적인-백업의-필요성">효율적인 백업의 필요성</a></li>
+        <li><a href="#버전관리-시스템-vcs-version-control-system">버전관리 시스템, VCS (Version Control System)</a>
+          <ul>
+            <li><a href="#버전관리-시스템의-문제점">버전관리 시스템의 문제점</a></li>
+          </ul>
+        </li>
+        <li><a href="#중앙집중형-버전관리-시스템-cvcs">중앙집중형 버전관리 시스템, CVCS</a>
+          <ul>
+            <li><a href="#중앙집중형-버전관리-시스템의-문제점">중앙집중형 버전관리 시스템의 문제점</a></li>
+          </ul>
+        </li>
+        <li><a href="#분산형-버전관리-시스템-dvcs">분산형 버전관리 시스템, DVCS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+  
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

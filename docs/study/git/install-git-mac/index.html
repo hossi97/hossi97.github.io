@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Git 설치하기 (MAC) # Homebrew 설치하기 # 맥을 사용해 개발하는 사람이라면, Homebrew 의 존재를 모르는 사람은 드물 것이다. Git 역시 Homebrew 를 통해 Git 을 설치하고 관리할 수 있다.
+Homebrew 란? # Homebrew 는 Mac 용 패키지 관리자 프로그램으로 제공하는 이점은 크게 2가지가 있다.
+Homebrew 에 등록된 프로그램들을 단순한 명령어를 통해 쉽게 설치할 수 있다. 설치한 프로그램들을 Homebrew 가 관리하는 디렉토리 내에서 쉽게 관리할 수 있다. Mac 을 통해 개발하는 사람들에게 필수적인 프로그램이라고 할 수 있다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Git 설치하기 - MAC" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hossi97.github.io/docs/study/git/install-git-mac/" />
+
+<title>Git 설치하기 - MAC | hossi&#39;s blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.fa81297f29283a9b9300f94a5b6e386beb50cae49736d3bcee5365a5fed2d796.css" integrity="sha256-&#43;oEpfykoOpuTAPlKW244a&#43;tQyuSXNtO87lNlpf7S15Y=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/ko.search.min.ef55d7c47131502f9a0ab3925c407c43aef05af4007c7236fd8d3e8cb2917698.js" integrity="sha256-71XXxHExUC&#43;aCrOSXEB8Q67wWvQAfHI2/Y0&#43;jLKRdpg=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="https://hossi97.github.io/docs/study/git/install-git-mac/index.xml" title="hossi's blog" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>hossi&#39;s blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Study</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b9874594414d39cfd734d05963545a36" class="toggle"  />
+    <label for="section-b9874594414d39cfd734d05963545a36" class="flex justify-between">
+      <a href="/docs/study/java/" class="">Java</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c2f2bffcd0cc96b23903228b0c6c3e80" class="toggle"  />
+    <label for="section-c2f2bffcd0cc96b23903228b0c6c3e80" class="flex justify-between">
+      <a role="button" class="">Lambda</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/study/java/Lambda/Lambda1/" class="">람다식</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/study/java/Lambda/Lambda2/" class="">람다식의 타입과 형변환</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aefbe02c11adffaccbc9def640bf830c" class="toggle"  />
+    <label for="section-aefbe02c11adffaccbc9def640bf830c" class="flex justify-between">
+      <a role="button" class="">Stream</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/study/git/" class="">Git</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/study/git/install-git-mac/" class="active">Git 설치하기 - MAC</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/study/git/about-git/" class="">버전관리 시스템</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>memory</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dc908141e478750f00bc34c895e4fd4f" class="toggle"  />
+    <label for="section-dc908141e478750f00bc34c895e4fd4f" class="flex justify-between">
+      <a role="button" class="">2022</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/memory/2022/11/" class="">Nov</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        etc
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Git 설치하기 - MAC</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#git-설치하기-mac">Git 설치하기 (MAC)</a>
+      <ul>
+        <li><a href="#homebrew-설치하기">Homebrew 설치하기</a>
+          <ul>
+            <li><a href="#homebrew-란">Homebrew 란?</a></li>
+            <li><a href="#homebrew-설치-명령어">Homebrew 설치 명령어</a></li>
+          </ul>
+        </li>
+        <li><a href="#git-설치하기">Git 설치하기</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="git-설치하기-mac">
+  Git 설치하기 (MAC)
+  <a class="anchor" href="#git-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0-mac">#</a>
+</h1>
+<hr>
+<h2 id="homebrew-설치하기">
+  Homebrew 설치하기
+  <a class="anchor" href="#homebrew-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0">#</a>
+</h2>
+<p>맥을 사용해 개발하는 사람이라면, Homebrew 의 존재를 모르는 사람은 드물 것이다. Git 역시 Homebrew 를 통해 Git 을 설치하고 관리할 수 있다.</p>
+<h3 id="homebrew-란">
+  Homebrew 란?
+  <a class="anchor" href="#homebrew-%eb%9e%80">#</a>
+</h3>
+<p>Homebrew 는 Mac 용 패키지 관리자 프로그램으로 제공하는 이점은 크게 2가지가 있다.</p>
+<ul>
+<li>Homebrew 에 등록된 프로그램들을 단순한 명령어를 통해 쉽게 설치할 수 있다.</li>
+<li>설치한 프로그램들을 Homebrew 가 관리하는 디렉토리 내에서 쉽게 관리할 수 있다.</li>
+</ul>
+<p>Mac 을 통해 개발하는 사람들에게 필수적인 프로그램이라고 할 수 있다.</p>
+<h3 id="homebrew-설치-명령어">
+  Homebrew 설치 명령어
+  <a class="anchor" href="#homebrew-%ec%84%a4%ec%b9%98-%eb%aa%85%eb%a0%b9%ec%96%b4">#</a>
+</h3>
+<p>터미널을 열고 아래 명령어를 작성하면 Homebrew 프로그램을 바로 설치할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/bin/bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>(Homebrew 에 대한 좀 더 자세한 내용은 
+  <a href="https://brew.sh/index_ko">Homebrew 홈페이지</a> 홈페이지에서 살펴보도록 하자.)</p>
+<hr>
+<h2 id="git-설치하기">
+  Git 설치하기
+  <a class="anchor" href="#git-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0">#</a>
+</h2>
+<p>터미널을 통해 아래 명령어를 사용하면 git 을 설치할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install git
+</span></span></code></pre></div><p>정상적으로 설치가 완료됐다면, 아래 명령어를 입력할 경우 설치된 git 버전을 확인할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git --version       // git version 2.xx.x
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/hossi97/blog/tree/main/content.ko/docs/study/git/install-git-mac/_index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+<script src="https://utteranc.es/client.js" repo="hossi97/blog" issue-term="pathname" label="comments" theme="github-light" crossorigin="anonymous" async></script>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#git-설치하기-mac">Git 설치하기 (MAC)</a>
+      <ul>
+        <li><a href="#homebrew-설치하기">Homebrew 설치하기</a>
+          <ul>
+            <li><a href="#homebrew-란">Homebrew 란?</a></li>
+            <li><a href="#homebrew-설치-명령어">Homebrew 설치 명령어</a></li>
+          </ul>
+        </li>
+        <li><a href="#git-설치하기">Git 설치하기</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+  
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
